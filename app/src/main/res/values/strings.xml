@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MatrimonyInterview</string>
+    <string name="app_name">Profile App</string>
     <string name="home_screen_profile_header">Profiles pending with me</string>
     <string name="profile_empty_message">You don\'t have any matching profile</string>
     <string name="gesture_screen_heading">Daily Recommendations</string>
