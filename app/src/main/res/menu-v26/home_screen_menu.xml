@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.homescreen.HomeScreen">
+
+    <item  android:id="@+id/receiver"
+        android:iconTint="@color/black"
+        android:icon="@drawable/home_menu_icon"
+                app:showAsAction = "ifRoom"
+        android:title="Receiver"/>
+
+</menu>

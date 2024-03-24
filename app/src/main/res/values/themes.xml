@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.MatrimonyInterview" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="AppFullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Matrimony" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="menu">@menu/home_screen_menu</item>
+
+    </style>
+
+    <style name="Theme.Matrimony" parent="Base.Theme.Matrimony" />
+
+    <style name="Gesture.Them" parent="Theme.Material3.DayNight.NoActionBar">
+                <item name="colorPrimaryDark">@color/lightGray</item>
+            </style>
+
+
+    <style name="roundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="myToolbarTheme">
+        <item name="colorControlNormal">#FF0000</item>
+    </style>
+</resources>
