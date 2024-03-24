@@ -1,10 +1,13 @@
 package com.example.matrimonyinterview.view.gesturescreen.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.matrimonyinterview.R
 import com.example.matrimonyinterview.databinding.GuesteritemsBinding
 import com.example.matrimonyinterview.model.Customer
+import com.example.matrimonyinterview.utills.Utils
 
 typealias NotifyEmptyLayout = () -> Unit
 
@@ -39,11 +42,13 @@ class GestureAdapter(private val notifyEmptyLayout: NotifyEmptyLayout) :
         return customerList.size
     }
 
-    fun removeParticularPosition(customer: Customer) {
+    //Removing clicked profile
+    fun removeParticularPosition(context: Context,customer: Customer) {
         customerList.remove(customer)
         if (customerList.size == 0) {
             notifyEmptyLayout.invoke()
         }
+        Utils.showToast(context,context.resources.getString(R.string.button_click_message))
         notifyDataSetChanged()
     }
 }

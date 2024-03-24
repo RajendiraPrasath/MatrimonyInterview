@@ -41,6 +41,7 @@ class CarouselAdapter(private val backArrowClick: backArrowClick) :
         return customerList.size
     }
 
+    //Handle back arrow click functionality
     fun onBackArrowClick() {
         backArrowClick.invoke(true)
     }

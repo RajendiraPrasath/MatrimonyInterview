@@ -1,8 +1,10 @@
 package com.example.matrimonyinterview.view.homescreen.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.matrimonyinterview.R
 import com.example.matrimonyinterview.databinding.HomescreenListItemBinding
 import com.example.matrimonyinterview.model.Customer
 import com.example.matrimonyinterview.utills.Utils
@@ -41,13 +43,16 @@ class HomeScreenAdapter(
         holder.binding.adapter = this
     }
 
-    fun removeParticularPosition(customer: Customer) {
+    //Removing clicked profile
+    fun removeParticularPosition(context: Context,customer: Customer) {
         customerList.remove(customer)
         Utils.customerList.remove(customer)
         buttonClick.invoke(true)
+        Utils.showToast(context,context.resources.getString(R.string.button_click_message))
         notifyDataSetChanged()
     }
 
+    //Open product details page
     fun openProfileDetailsPage() {
         openProfilePage.invoke(true)
     }

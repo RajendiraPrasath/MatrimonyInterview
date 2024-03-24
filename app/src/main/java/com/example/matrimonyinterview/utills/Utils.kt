@@ -1,10 +1,14 @@
 package com.example.matrimonyinterview.utills
 
+import android.content.Context
+import android.widget.Toast
 import com.example.matrimonyinterview.model.Customer
 
 class Utils {
     companion object {
+
         val customerList = mutableSetOf<Customer>()
+
         val input = listOf(
             Customer(
                 name = "Sachin",
@@ -52,5 +56,9 @@ class Utils {
                 address = " Mumbai, India"
             )
         )
+
+        fun showToast(context: Context, message: String){
+            Toast.makeText(context,message,Toast.LENGTH_SHORT).show()
+        }
     }
 }

@@ -66,14 +66,23 @@ dependencies {
 
     // Room DataBase
     implementation("androidx.room:room-runtime:2.6.1")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.recyclerview:recyclerview:1.3.2")
-    implementation("androidx.cardview:cardview:1.0.0")
     kapt("androidx.room:room-compiler:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1") // Kotlin Extensions and Coroutines support for Room
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0") // LifecycleScope
 
+    //Constraintlayout
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+
+    //Recyclerview
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+
+    //CardView
+    implementation("androidx.cardview:cardview:1.0.0")
+
+    //Material Button
     implementation("com.google.android.material:material:1.11.0")
+
+    //ViewPager2
     implementation("androidx.viewpager2:viewpager2:1.0.0")
 
     testImplementation("junit:junit:4.13.2")

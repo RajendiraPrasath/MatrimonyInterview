@@ -32,11 +32,14 @@ class HomeScreen : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
         setupRecyclerView()
 
+        // Initialize View Model
         val viewModel = ViewModelProvider.AndroidViewModelFactory(application)
             .create(HomeScreenViewModel::class.java)
 
+        // Insert 5 static profiles to Room Database
         viewModel.addCustomer()
 
+        // Get profiles data's from Room Database
         lifecycleScope.launch {
             viewModel.getAllCustomer().collect {
                 for (customer in it) {
@@ -51,6 +54,7 @@ class HomeScreen : AppCompatActivity() {
 
     }
 
+    // Adding adapter to Recyclerview
     private fun setupRecyclerView() {
         homeScreenBinding.contentMain.recyclerView.apply {
             layoutManager =
@@ -73,18 +77,21 @@ class HomeScreen : AppCompatActivity() {
         }
     }
 
+    // Updating horizontal slider header
     @SuppressLint("SetTextI18n")
     private fun updateRecyclerViewHeading() {
         homeScreenBinding.contentMain.heading.text =
             Utils.customerList.size.toString() + " " + applicationContext.resources.getString(R.string.home_screen_profile_header)
     }
 
+    // Create menu
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.home_screen_menu, menu)
         menu?.getItem(0)?.icon?.setTint(applicationContext.getColor(R.color.black))
         return super.onCreateOptionsMenu(menu)
     }
 
+    //Handle menu icon click functionality
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.receiver -> {

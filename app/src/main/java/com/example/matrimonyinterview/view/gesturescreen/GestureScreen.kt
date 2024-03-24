@@ -26,6 +26,7 @@ class GestureScreen : AppCompatActivity() {
         setViewPager()
     }
 
+    //Initialize ViewPager2
     private fun setViewPager() {
         gestureScreenBinding.guesterViewpager.apply {
             adapter = gestureAdapter
@@ -35,6 +36,7 @@ class GestureScreen : AppCompatActivity() {
         }
     }
 
+    // Set adapter to Viewpager2
     private fun setAdapter() {
         gestureAdapter = GestureAdapter {
             gestureScreenBinding.emptyNotification.visibility = View.VISIBLE
@@ -47,6 +49,7 @@ class GestureScreen : AppCompatActivity() {
 
     }
 
+    //Handle back button click functionality
     private fun backAction() {
         gestureScreenBinding.gestureBackArrow.setOnClickListener {
             this.finish()

@@ -15,6 +15,7 @@ class GestureScreenViewModel(application: Application) : AndroidViewModel(applic
         repository = CustomerRepository(customerDao)
     }
 
+    //Get customer details from room database
     fun getAllCustomer(): Flow<List<Customer>> {
         return repository.getAllCustomer()
     }

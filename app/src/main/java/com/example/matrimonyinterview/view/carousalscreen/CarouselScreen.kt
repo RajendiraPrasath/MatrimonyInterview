@@ -26,6 +26,7 @@ class CarouselScreen : AppCompatActivity() {
 
     }
 
+    //Initialize adapter
     private fun setAdapter() {
         carouselAdapter = CarouselAdapter {
             this.finish()
@@ -36,6 +37,7 @@ class CarouselScreen : AppCompatActivity() {
 
     }
 
+    //Initialize viewpager2 config fields
     private fun setUpViewPager() {
         carousalScreenContentBinding.viewpager.apply {
             clipChildren = false  // No clipping the left and right items
@@ -46,6 +48,7 @@ class CarouselScreen : AppCompatActivity() {
         }
     }
 
+    //Handle carousal transition
     private fun setViewPagerCarousalTransition() {
         val compositePageTransformer = CompositePageTransformer()
         compositePageTransformer.addTransformer(MarginPageTransformer((1 * Resources.getSystem().displayMetrics.density).toInt()))

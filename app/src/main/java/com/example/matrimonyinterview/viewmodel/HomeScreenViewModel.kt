@@ -19,6 +19,7 @@ class HomeScreenViewModel(application: Application) : AndroidViewModel(applicati
         repository = CustomerRepository(customerDao)
     }
 
+    //Add customer details to Room database
     fun addCustomer() {
         viewModelScope.launch(Dispatchers.IO) {
             for (customer in Utils.input) {
@@ -27,6 +28,7 @@ class HomeScreenViewModel(application: Application) : AndroidViewModel(applicati
         }
     }
 
+    //Get customer details from room database
     fun getAllCustomer(): Flow<List<Customer>> {
         return repository.getAllCustomer()
     }

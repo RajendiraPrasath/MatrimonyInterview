@@ -11,4 +11,5 @@
     <string name="no">No</string>
     <string name="nothing"> Nothing here!</string>
     <string name="database_name">customer_database</string>
+    <string name="button_click_message">The selected profile has been removed.</string>
 </resources>
