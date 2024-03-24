@@ -13,7 +13,7 @@ class Utils {
                 language = "Hindi",
                 designation = "Cricketer",
                 image = "sachin",
-                address = "Mumbai,India"
+                address = " Mumbai, India"
             ),
             Customer(
                 name = "Sehwag",
@@ -22,7 +22,7 @@ class Utils {
                 language = "Hindi",
                 designation = "Cricketer",
                 image = "sehwag",
-                address = "Mumbai,India"
+                address = " Mumbai, India"
             ),
             Customer(
                 name = "Yuvraj",
@@ -31,7 +31,7 @@ class Utils {
                 language = "Hindi",
                 designation = "Cricketer",
                 image = "yuvraj",
-                address = "Mumbai,India"
+                address = " Mumbai, India"
             ),
             Customer(
                 name = "Dhoni",
@@ -40,7 +40,7 @@ class Utils {
                 language = "Hindi",
                 designation = "Cricketer",
                 image = "dhoni",
-                address = "Mumbai,India"
+                address = " Mumbai, India"
             ),
             Customer(
                 name = "Kohli",
@@ -49,7 +49,7 @@ class Utils {
                 language = "Hindi",
                 designation = "Cricketer",
                 image = "kohli",
-                address = "Mumbai,India"
+                address = " Mumbai, India"
             )
         )
     }
